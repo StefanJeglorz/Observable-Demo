@@ -1,0 +1,49 @@
+﻿@inject IStore store
+@implements IDisposable
+<h3>Customer</h3>
+@if (isSubscriber)
+{
+    <button @onclick=Unsubscribe>Unsubscribe</button>
+}
+else
+{
+    <button @onclick=Subscribe>Subscribe</button>
+}
+
+<h4>Catalog</h4>
+<ul>
+    @foreach (var item in catalog)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@code {
+    private bool isSubscriber;
+    private List<string> catalog;
+
+    protected override void OnInitialized()
+    {
+
+    }
+
+    private void Subscribe()
+    {
+
+    }
+
+    private void Unsubscribe()
+    {
+
+    }
+
+    private void OnCatalogChanged(object sender, List<string> args)
+    {
+        
+    }
+
+    public void Dispose()
+    {
+
+    }
+}

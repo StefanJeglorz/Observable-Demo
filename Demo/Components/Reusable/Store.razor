@@ -1,0 +1,13 @@
+﻿@inject IStore store
+
+<h3>Store</h3>
+<input type="text" @bind-value=item />
+<button disabled="@(item.Length < 3)">Add</button>
+@code {
+    private string item = string.Empty;
+    private void Add()
+    {
+        store.AddStoreItem(item);
+        item = string.Empty;
+    }
+}
